@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+</head>
+<body>
+<input type="text" id="myInput" onkeyup="myFunction();">
+<ul id="myUL">
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+<script>
+      function myFunction(){
+        let input = parseInt(document.querySelector('#myInput').value);
+        let li = document.getElementsByTagName('li');
+        for (let i = 0; i < li.length; i++) {
+          let number = parseInt(li[i].innerHTML);
+          if (number < input) {
+            li[i].style.display = 'none';
+          }
+          else {
+            li[i].style.display = '';
+          };
+        };
+      };
+</script>
+</body>
+</html>
